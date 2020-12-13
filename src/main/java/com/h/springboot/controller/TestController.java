@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @AllArgsConstructor // 여기서는 없어도 된다.
@@ -26,7 +27,7 @@ public class TestController {
     }
 
     @GetMapping(value = "/api/user/{userId}")
-    public String getUser(@PathVariable Long userId) {
+    public Optional<User> getUser(@PathVariable Long userId) {
         return testService.getUser(userId);
     }
 

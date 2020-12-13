@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Optional;
 
 @AllArgsConstructor
 @Service
@@ -21,13 +22,8 @@ public class TestService {
         return userRepository.findAll();
     }
 
-    public String getUser(Long userId) {
-        return "{\n" +
-                "    \"id\": ,\n" +
-                "    \"name\": \"윤태인\",\n" +
-                "    \"age\": 18,\n" +
-                "    \"학교\": \"서현중\"\n" +
-                "  }";
+    public Optional<User> getUser(Long userId) {
+        return userRepository.findById(userId);
     }
 
 }
