@@ -16,33 +16,15 @@
     <a href="./map.html" target="iframe1">지도 예제 페이지</a>
     <a href="./youtube.html" target="iframe1">유튜브 영상 넣기</a>
 </div>
-<!-- * 카카오맵 - 지도퍼가기 -->
-<!-- 1. 지도 노드 -->
 <div class="main">
-<div id="daumRoughmapContainer1610248451397" class="root_daum_roughmap root_daum_roughmap_landing"></div>
-
-<!--
-	2. 설치 스크립트
-	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
--->
-
-<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-
-<!-- 3. 실행 스크립트 -->
-<script charset="UTF-8">
-    new daum.roughmap.Lander({
-        "timestamp" : "1610248451397",
-        "key" : "23tse",
-        "mapWidth" : "max-width",
-        "mapHeight" : "max-height"
-    }).render();
-</script>
+    <iframe width="1050" height="600" src="https://www.youtube.com/embed/GkW538hhFaY" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
 </div>
 
 
 <style>
     body {
-
         font-family: "Lato", sans-serif;
 
     }
@@ -80,7 +62,12 @@
     }
 
     @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
     }
 </style>
