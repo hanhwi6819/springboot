@@ -16,27 +16,66 @@
     <a href="./map.html" target="iframe1">지도 예제 페이지</a>
     <a href="./youtube.html" target="iframe1">유튜브 영상 넣기</a>
 </div>
-<!-- * 카카오맵 - 지도퍼가기 -->
-<!-- 1. 지도 노드 -->
 <div class="main">
-<div id="daumRoughmapContainer1610248451397" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
-<!--
-	2. 설치 스크립트
-	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
--->
+    <!-- 카카오지도-->
+    카카오지도
+    <div id="daumRoughmapContainer1610248451397" class="root_daum_roughmap root_daum_roughmap_landing"></div>
 
-<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-<!-- 3. 실행 스크립트 -->
-<script charset="UTF-8">
-    new daum.roughmap.Lander({
-        "timestamp" : "1610248451397",
-        "key" : "23tse",
-        "mapWidth" : "max-width",
-        "mapHeight" : "max-height"
-    }).render();
-</script>
+    <script charset="UTF-8" class="daum_roughmap_loader_script"
+            src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp": "1610248451397",
+            "key": "23tse",
+            "mapWidth": "max-width",
+            "mapHeight": "max-height"
+        }).render();
+    </script>
+    <br>
+    <!-- 구글지도-->
+    구글지도<br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.163254339995!2d127.06861291515949!3d37.29126447985036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b5b103fc650d3%3A0xd3d7442516618329!2z7J207J2Y7KSR7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1610250477750!5m2!1sko!2skr"
+            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0"></iframe>
+
+    <table cellpadding="0" cellspacing="0" width="462">
+        <tr>
+            <td style="border:1px solid #cecece;"><a
+                    href="https://v4.map.naver.com/?__pinOnly=false&query=&searchCoord=&menu=location&tab=1&lng=9a287171eaa6f6c60faf59e79ab0aa35&__fromRestorer=true&mapMode=0&mpx=45ba17cd31ddb10ef30b41acfe545bc8ba81e492eb0bd0f48936e90888fabfc66374a7a426f7498e61ad883bed1b7dc6&pinId=19213709&pinType=site&lat=5bf270937f32f0f2f0a5589070399bdf&dlevel=11&enc=b64"
+                    target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1610250704059_1802145586"
+                                         width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0"
+                                         style="vertical-align:top;"/></a></td>
+        </tr>
+        <br>
+
+        <!-- 네이버지도-->
+        네이버지도<br>
+        <tr>
+            <td>
+                <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td height="30" bgcolor="#f9f9f9" align="left"
+                            style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;">
+                            <span style="font-family: tahoma; font-size: 11px; color:#666;">2021.1.10</span>&nbsp;<span
+                                style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a
+                                style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;"
+                                href="https://v4.map.naver.com/?__pinOnly=false&query=&searchCoord=&menu=location&tab=1&lng=9a287171eaa6f6c60faf59e79ab0aa35&__fromRestorer=true&mapMode=0&mpx=45ba17cd31ddb10ef30b41acfe545bc8ba81e492eb0bd0f48936e90888fabfc66374a7a426f7498e61ad883bed1b7dc6&pinId=19213709&pinType=site&lat=5bf270937f32f0f2f0a5589070399bdf&dlevel=11&enc=b64"
+                                target="_blank">지도 크게 보기</a></td>
+                        <td width="98" bgcolor="#f9f9f9" align="right"
+                            style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;">
+                            <span style="float:right;"><span
+                                    style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a
+                                    style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;"
+                                    href="https://www.navercorp.com" target="_blank">NAVER Corp.</a></span></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </div>
 
 
@@ -80,7 +119,12 @@
     }
 
     @media screen and (max-height: 450px) {
-        .sidenav {padding-top: 15px;}
-        .sidenav a {font-size: 18px;}
+        .sidenav {
+            padding-top: 15px;
+        }
+
+        .sidenav a {
+            font-size: 18px;
+        }
     }
 </style>
