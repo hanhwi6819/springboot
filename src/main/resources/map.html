@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User page</title>
+</head>
+<body>
+<div class="sidenav">
+    <a href="./index.html" target="iframe1">Index</a>
+    <a href="./userList.html" target="iframe1">User List</a>
+    <a href="./registUser.html" target="iframe1">User Registration</a>
+    <a href="./teacherList.html" target="iframe1">Teacher List</a>
+    <a href="./registTeacher.html" target="iframe1">Teacher Registration</a>
+    <a href="./map.html" target="iframe1">지도 예제 페이지</a>
+</div>
+<!-- * 카카오맵 - 지도퍼가기 -->
+<!-- 1. 지도 노드 -->
+<div class="main">
+<div id="daumRoughmapContainer1610248451397" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+<!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<!-- 3. 실행 스크립트 -->
+<script charset="UTF-8">
+    new daum.roughmap.Lander({
+        "timestamp" : "1610248451397",
+        "key" : "23tse",
+        "mapWidth" : "max-width",
+        "mapHeight" : "max-height"
+    }).render();
+</script>
+</div>
+
+
+<style>
+    body {
+
+        font-family: "Lato", sans-serif;
+
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 210px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    .sidenav a {
+        margin-left: 10px;
+        padding: 6px 8px 6px 0px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .main {
+        margin-left: 210px; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+        line-height: 30px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+</style>

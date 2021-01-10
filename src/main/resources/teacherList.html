@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+<div class="sidenav">
+    <a href="./index.html" target="iframe1">Index</a>
+    <a href="./userList.html" target="iframe1">User List</a>
+    <a href="./registUser.html" target="iframe1">User Registration</a>
+    <a href="./teacherList.html" target="iframe1">Teacher List</a>
+    <a href="./registTeacher.html" target="iframe1">Teacher Registration</a>
+</div>
+<div class="main">
+    <h3>Teacher API 받아오기.</h3>
+    <h4>TEACHER LIST TABLE</h4>
+    <table id="teacherTable" class="display" style="width:100%">
+        <thead>
+        <tr>
+            <th>idx</th>
+            <th>name</th>
+            <th>age</th>
+            <th>subject</th>
+            <th>annual</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+
+        </tr>
+        </tfoot>
+    </table>
+    <table>
+
+    </table>
+</div>
+</body>
+<script>
+
+    $(document).ready(function(){
+
+        $.ajax({
+            url : "http://localhost:8080/api/teacher",
+            type : 'get',
+            success : function(data){
+                console.log(data);
+                var str = '<tr>';
+                $.each(data , function(i){
+                    str += '<td>' + data[i].idx + '</td><td>' + data[i].name + '</td><td>' + data[i].age + '</td><td>' + data[i].subject + '</td>'+ '</td><td>' + data[i].annual + '</td>' ;
+                    str += '</tr>';
+                });
+                $("#teacherTable").append(str);
+            },
+            error : function(){
+                console.log("error")
+            }
+        });
+
+
+    });
+
+</script>
+</html>
+<style>
+    body {
+        font-family: "Lato", sans-serif;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 210px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    .sidenav a {
+        margin-left: 10px;
+        padding: 6px 8px 6px 0px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+    }
+
+    .main {
+        margin-left: 210px; /* Same as the width of the sidenav */
+        font-size: 20px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+    }
+</style>
